@@ -1,22 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import  {  useState } from 'react';
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { NavLink, Outlet } from 'react-router-dom';
-import { getBook } from '../../utilies/utility';
 
 const BookListed = () => {
     const [tagIndex, setTagIndex] = useState(0);
-
-
-
-    // const [readBook, setReadBook] = useState();
-
-    // useEffect(() => {
-    //     const storeRedadBook = getBook();
-    //     setReadBook(storeRedadBook);
-    // }, [])
-    // console.log(readBook);
-
-
     return (
         <div>
             <h1 className='text-3xl font-black bg-[#1313130D] p-6 rounded-lg text-center'>Books</h1>

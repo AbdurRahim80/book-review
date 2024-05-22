@@ -1,6 +1,7 @@
 
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { setBook } from '../../utilies/utility';
+import { setWishBook } from '../../utilies/utility1';
 
 const BookDetails = () => {
     const bookDetails = useLoaderData();
@@ -8,8 +9,11 @@ const BookDetails = () => {
     const bookDetail = bookDetails.find(bookDeta => bookDeta.bookId === bookId);
     const { image, tags, bookName, review, author, category, rating, totalPages, publisher, yearOfPublishing } = bookDetail;
 
-    const handleBook = bookId=>{
+    const handleReadBook = bookId=>{
         setBook(bookId)
+    }
+    const handleWishBook = bookId=>{
+        setWishBook(bookId)
     }
 
     return (
@@ -53,11 +57,13 @@ const BookDetails = () => {
                 </div>
                 <div className='flex gap-5 items-center'>
                     <Link
-                    onClick={()=>handleBook(bookId)}
+                    onClick={()=>handleReadBook(bookId)}
                      className="">
                         <a className="py-[13px] px-4  rounded-xl border">Read</a>
                     </Link>
-                    <Link className="">
+                    <Link 
+                    onClick={()=>handleWishBook(bookId)}
+                    className="">
                         <a className="btn bg-[#50B1C9] text-[#FFF]">Wishlist</a>
                     </Link>
                 </div>

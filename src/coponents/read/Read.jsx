@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import { getBook } from '../../utilies/utility';
 import { Link, useLoaderData } from 'react-router-dom';
-
+import { CiLocationOn } from "react-icons/ci";
+import { AiOutlineUsergroupDelete } from "react-icons/ai";
+import { MdOutlineContactPage } from "react-icons/md";
 const Read = () => {
     const readLoader = useLoaderData()
-    const [readBook, setReadBook] = useState([]);
+    const [readBook, setWishBook] = useState([]);
     // const {bookId} = useParams()
     useEffect(() => {
         const storeRedadBook = getBook();
@@ -19,7 +21,7 @@ const Read = () => {
                 }
 
             }
-            setReadBook(bookRead)
+            setWishBook(bookRead)
             // console.log(readLoader,bookRead,storeRedadBook )
         }
 
@@ -33,9 +35,9 @@ const Read = () => {
                 {
                     readBook.map(readbk => <div key={readbk.bookId}>
                         <div className=' border p-2 my-5 rounded-lg'>
-                            <div className='grid grid-cols-1 lg:grid-cols-2  gap-6 '>
-                                <div className='flex justify-center items-center bg-[#F3F3F3]  rounded-lg'>
-                                    <img src={readbk.image} className='' alt="" />
+                            <div className='flex flex-col lg:flex-row gap-10  '>
+                                <div className='flex justify-center items-center bg-[#F3F3F3] w-80 rounded-lg'>
+                                    <img src={readbk.image} className='h-40' alt="" />
                                 </div>
                                 <div className='space-y-2'>
                                     <h1 className='fontPlayfairDisplay text-[#131313] text-lg font-extrabold'>{readbk.bookName}</h1>
@@ -53,35 +55,28 @@ const Read = () => {
                                                     </div>
                                                 </div>)
                                             }
-                                            <div className='text-xs'>
+                                            <div className=' flex gap-1 items-center text-xs'>
+                                                <span><CiLocationOn size={20} /></span>
                                                 <p>Year of Publishing: <span>{readbk.yearOfPublishing}</span></p>
                                             </div>
                                         </div>
                                     </div>
-                                    <hr />
-                                    <div className='flex gap-10'>
-                                        <div className='space-y-3'>
-                                            <p>Number of Pages:</p>
-                                            <p>Publisher:</p>
-                                            <p>Year of Publishing:</p>
-                                            <p>Rating:</p>
-                                        </div>
-                                        <div className='space-y-3 font-semibold'>
-                                            <p>{readbk.totalPages}</p>
-                                            <p>{readbk.publisher}</p>
-                                            <p>{readbk.yearOfPublishing}</p>
-                                            <p>{readbk.rating}</p>
-                                        </div>
+                                    <div className='flex justify-start gap-6'>
+                                        
+                                        <p className='flex gap-2 text-sm'><span><AiOutlineUsergroupDelete size={20}/></span> Publisher: {readbk.publisher}</p>
+                                        <p className='flex gap-2 text-sm'><span><MdOutlineContactPage size={20}/></span> Page: {readbk.totalPages}</p>
                                     </div>
-                                    <div className='flex gap-5 items-center'>
-                                        <Link
-                                            onClick={() => handleBook(bookId)}
-                                            className="">
-                                            <a className="py-[13px] px-4  rounded-xl border">Read</a>
+                                    <div className='flex gap-5 items-center text-sm'>
+                                        <Link>
+                                            <button className='px-3 py-2 text-[#328EFF] bg-[#328EFF26] rounded-2xl'>Category: {readbk.category}</button>
                                         </Link>
-                                        <Link className="">
-                                            <a className="btn bg-[#50B1C9] text-[#FFF]">Wishlist</a>
+                                        <Link>
+                                            <button className='px-3 py-2 text-[#FFAC33] bg-[#FFAC3326] rounded-2xl'>Rating: {readbk.rating}</button>
                                         </Link>
+                                        <Link>
+                                            <button className='px-3 py-2 text-[#FFF] bg-[#23BE0A] rounded-2xl'>View Details</button>
+                                        </Link>
+                                
                                     </div>
                                 </div>
                             </div>
