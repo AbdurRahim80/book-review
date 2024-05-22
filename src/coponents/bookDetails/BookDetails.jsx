@@ -1,13 +1,16 @@
 
 import { Link, useLoaderData, useParams } from 'react-router-dom';
+import { setBook } from '../../utilies/utility';
 
 const BookDetails = () => {
     const bookDetails = useLoaderData();
-    // console.log(bookDetails)
     const { bookId } = useParams()
     const bookDetail = bookDetails.find(bookDeta => bookDeta.bookId === bookId);
-    // console.log(bookDetail);
     const { image, tags, bookName, review, author, category, rating, totalPages, publisher, yearOfPublishing } = bookDetail;
+
+    const handleBook = bookId=>{
+        setBook(bookId)
+    }
 
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10'>
@@ -49,7 +52,9 @@ const BookDetails = () => {
                     </div>
                 </div>
                 <div className='flex gap-5 items-center'>
-                    <Link className="">
+                    <Link
+                    onClick={()=>handleBook(bookId)}
+                     className="">
                         <a className="py-[13px] px-4  rounded-xl border">Read</a>
                     </Link>
                     <Link className="">

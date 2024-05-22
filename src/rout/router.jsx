@@ -11,44 +11,61 @@ import WishList from "../coponents/wishList/WishList";
 const router = createBrowserRouter([
     {
         path: '/',
-        element: <MainLay/>,
+        element: <MainLay />,
         children: [
             {
                 index: true,
-                element:<Home/>,
-                loader: ()=> fetch('../data.json')
+                element: <Home />,
+                loader: () => fetch('../data.json')
 
             },
             {
                 path: '/book/:bookId',
-                element: <BookDetails/>,
-                loader:()=> fetch(`../data.json`),
-                children: [
-                    // {
-                    //     index: true,
-                    //     element: <Read/>,
-                    //     loader:()=> fetch(`../data.json`)
-                    // },
-                    {
-                        path: 'wishlist',
-                        element: <WishList/>,
-                        loader:()=> fetch(`../data.json`)
-                    }
-                ]
+                element: <BookDetails />,
+                loader: () => fetch(`../data.json`),
+                // children: [
+                //     {
+                //         index: true,
+                //         element: <Read/>,
+                //         loader:()=> fetch(`../data.json`)
+                //     },
+                //     {
+                //         path: 'wishlist',
+                //         element: <WishList/>,
+                //         loader:()=> fetch(`../data.json`)
+                //     }
+                // ]
             }
             ,
             {
                 path: '/listed_books',
-                element: <BookListed/>
+                element: <BookListed />,
+                loader:() => fetch(`../data.json`),
+                children: [
+                    {
+                        index: true,
+                        element: <Read />,
+                        loader: () => fetch(`../data.json`)
+                    },
+                    {
+                        path: 'wishlist',
+                        element: <WishList />,
+                        loader: () => fetch(`../data.json`)
+                    }
+                ]
             },
+            // {
+            //     index: true,
+            //     element: <Read />,
+            // },
             {
                 path: '/pages_to_read',
-                element: <PageToRead/>
+                element: <PageToRead />
             },
-            {
-                index: '../read',
-                element: <Read/>
-            }
+            // {
+            //     index: '../read',
+            //     element: <Read/>
+            // }
 
         ]
     }
