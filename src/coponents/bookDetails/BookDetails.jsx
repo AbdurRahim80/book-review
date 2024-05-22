@@ -3,10 +3,10 @@ import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 const BookDetails = () => {
     const bookDetails = useLoaderData();
-    console.log(bookDetails)
+    // console.log(bookDetails)
     const { bookId } = useParams()
     const bookDetail = bookDetails.find(bookDeta => bookDeta.bookId === bookId);
-    console.log(bookDetail);
+    // console.log(bookDetail);
     const { image, tags, bookName, review, author, category, rating, totalPages, publisher, yearOfPublishing } = bookDetail;
 
     return (
