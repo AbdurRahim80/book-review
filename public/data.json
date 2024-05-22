@@ -1,0 +1,98 @@
+[
+  {
+    "bookId": "1",
+    "bookName": "The Silent Patient",
+    "author": "Alex Michaelides",
+    "image": "https://i.ibb.co/Y7pk2PG/kindpng-4945926-1.png",
+    "review": "The Silent Patient is a gripping psychological thriller that hooks you from the first page. The author masterfully builds suspense, keeping you guessing until the shocking revelation. It's a rollercoaster ride of emotions, from fear to sympathy to disbelief. Overall, a must-read for thriller fans.",
+    "totalPages": 336,
+    "rating": 4.5,
+    "category": "Thriller",
+    "tags": [
+      "Suspense",
+      "Psychological"
+    ],
+    "publisher": "Celadon Books",
+    "yearOfPublishing": 2019
+  },
+  {
+    "bookId": "2",
+    "bookName": "Where the Crawdads Sing",
+    "author": "Delia Owens",
+    "image": "https://i.ibb.co/CJ6m8kq/kindpng-4022054-1.png",
+    "review": "Where the Crawdads Sing is a mesmerizing novel that transports you to the tranquil marshes of North Carolina. The murder mystery subplot adds intrigue, and the themes of love, loss, and resilience resonate deeply. Overall, a hauntingly beautiful tale that lingers in the mind.",
+    "totalPages": 384,
+    "rating": 4.8,
+    "category": "Fiction",
+    "tags": [
+      "Mystery",
+      "Drama"
+    ],
+    "publisher": "G.P. Putnam's Sons",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": "3",
+    "bookName": "Educated",
+    "author": "Tara Westover",
+    "image": "https://i.ibb.co/WFtCcgD/kindpng-7318921.png",
+    "review": "Educated is a powerful memoir that chronicles Tara Westover's journey from a survivalist family to earning a PhD. The book raises thought-provoking questions about education, family, and identity. Overall, it's a testament to the transformative power of education and the human spirit.",
+    "totalPages": 352,
+    "rating": 4.7,
+    "category": "Biography",
+    "tags": [
+      "Memoir",
+      "Inspiration"
+    ],
+    "publisher": "Random House",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": "4",
+    "bookName": "Becoming",
+    "author": "Michelle Obama",
+    "image": "https://i.ibb.co/y86CZMs/bannar.png",
+    "review": "Becoming is an intimate and inspiring memoir that gives readers a glimpse into Michelle Obama's life. The book is filled with warmth, humor, and wisdom. It's a testament to her grace and resilience in the face of challenges. Overall, a call to action for self-discovery and growth.",
+    "totalPages": 448,
+    "rating": 4.9,
+    "category": "Biography",
+    "tags": [
+      "Memoir",
+      "Inspiration"
+    ],
+    "publisher": "Crown Publishing Group",
+    "yearOfPublishing": 2018
+  },
+  {
+    "bookId": "5",
+    "bookName": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.ibb.co/842rGH5/kindpng-2193744-1.png",
+    "review": "The Hobbit is a timeless fantasy adventure that transports readers to Middle-earth. Tolkien's rich imagination and captivating storytelling bring the world of Bilbo Baggins to life. It's a classic tale of heroism and self-discovery that appeals to readers of all ages.",
+    "totalPages": 310,
+    "rating": 4.7,
+    "category": "Fantasy",
+    "tags": [
+      "Adventure",
+      "Classic"
+    ],
+    "publisher": "George Allen & Unwin",
+    "yearOfPublishing": 1937
+  },
+  {
+    "bookId": "6",
+    "bookName": "1984",
+    "author": "George Orwell",
+    "image": "https://i.ibb.co/ZYBr8p3/kindpng-5624060-1.png",
+    "review": "1984 is a chilling dystopian novel that remains relevant in today's society. Orwell's portrayal of a totalitarian regime is haunting and thought-provoking. Overall, a warning against the dangers of unchecked power, with themes that resonate deeply with readers around the world.",
+    "totalPages": 328,
+    "rating": 4.6,
+    "category": "Dystopian",
+    "tags": [
+      "Classic",
+      "Political"
+    ],
+    "publisher": "Secker & Warburg",
+    "yearOfPublishing": 1949
+  }
+]
