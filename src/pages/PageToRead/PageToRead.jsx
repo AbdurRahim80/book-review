@@ -49,7 +49,7 @@ const TriangleBar = (props) => {
 const PageToRead = () => {
 
     const readLoader = useLoaderData()
-    const [readBook, setReadBook] = useState([]);
+    const [readBook, setReadBook] = useState();
     // const {bookId} = useParams()
     useEffect(() => {
         const storeRedadBook = getBook();
@@ -65,23 +65,15 @@ const PageToRead = () => {
 
             }
             setReadBook(bookRead)
-            // console.log(readLoader,bookRead,storeRedadBook )
+
         }
 
     }, []);
 
-
-
-    // const { image, tags, bookName, review, author, category, rating, totalPages, publisher, yearOfPublishing } = readbk;
-
-    console.log("For Chartsss", readBook[0]);
+    console.log("For Chartsss", readBook);
     return (
-        <div>
-            {
-                readBook.map(read => console.log("Book Name", read.bookName, read.totalPages))
 
-            }
-            
+        <div>
             <BarChart
                 width={500}
                 height={300}

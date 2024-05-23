@@ -1,22 +1,18 @@
-// import React, { useEffect, useState } from 'react';
-// import { getBook } from '../../utilies/utility';
 
 import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
-import { getBook } from "../../utilies/utility";
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineUsergroupDelete } from "react-icons/ai";
 import { MdOutlineContactPage } from "react-icons/md";
+import { getWishList } from "../../utilies/utility";
 
 const WishList = () => {
     const readLoader = useLoaderData()
     const [readBook, setReadBook] = useState([]);
-    // const {bookId} = useParams()
     useEffect(() => {
-        const storeRedadBook = getBook();
+        const storeRedadBook = getWishList();
         if (readLoader.length > 0) {
-            // const bookRead = readLoader.filter(readbk => 
-            //     storeRedadBook.include(readbk.bookId))
+
             const bookRead = [];
             for (const id of storeRedadBook) {
                 const book = readLoader.find(book => book.bookId === id)
@@ -26,13 +22,10 @@ const WishList = () => {
 
             }
             setReadBook(bookRead)
-            // console.log(readLoader,bookRead,storeRedadBook )
+
         }
 
     }, []);
-
-    // const { image, tags, bookName, review, author, category, rating, totalPages, publisher, yearOfPublishing } = readbk;
-
     return (
         <div>
             <div className=''>

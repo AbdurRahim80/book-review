@@ -22,4 +22,26 @@ export const setBook = bookId=>{
     toast.success("book add successful!")
 
 }
+export const getWishList =()=>{
+    let books = [];
+    const storedBook = localStorage.getItem("wishList");
+    if(storedBook){
+        books = JSON.parse(storedBook);
+    }
+    return books
+}
+
+// save book data 
+
+export const setWishList = bookId=>{
+    let books = getBook();
+    const isExit = books.find(bId=> bId === bookId);
+    if(isExit){
+        return toast.error("Already add it!")
+    }
+    books.push(bookId);
+    localStorage.setItem("wishList", JSON.stringify(books))
+    toast.success("book add successful!")
+
+}
 
