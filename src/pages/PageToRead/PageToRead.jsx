@@ -70,8 +70,8 @@ const PageToRead = () => {
 
     }, []);
 
-    console.log("For Chartsss", readBook);
-    console.log("For Chartsss", readBook.bookName);
+    // console.log("For Chartsss", readBook);
+    // console.log("For Chartsss", readBook.bookName);
     return (
 
         <div>
