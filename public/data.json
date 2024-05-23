@@ -1,3 +1,4 @@
+
 [
   {
     "bookId": "1",
@@ -13,7 +14,9 @@
       "Psychological"
     ],
     "publisher": "Celadon Books",
-    "yearOfPublishing": 2019
+    "yearOfPublishing": 2019,
+    "email": "alexmichaelides@example.com",
+    "contact": "+1-555-1234"
   },
   {
     "bookId": "2",
@@ -29,7 +32,9 @@
       "Drama"
     ],
     "publisher": "G.P. Putnam's Sons",
-    "yearOfPublishing": 2018
+    "yearOfPublishing": 2018,
+    "email": "deliaowens@example.com",
+    "contact": "+1-555-5678"
   },
   {
     "bookId": "3",
@@ -45,7 +50,9 @@
       "Inspiration"
     ],
     "publisher": "Random House",
-    "yearOfPublishing": 2018
+    "yearOfPublishing": 2018,
+    "email": "tarawestover@example.com",
+    "contact": "+1-555-2345"
   },
   {
     "bookId": "4",
@@ -61,7 +68,9 @@
       "Inspiration"
     ],
     "publisher": "Crown Publishing Group",
-    "yearOfPublishing": 2018
+    "yearOfPublishing": 2018,
+    "email": "michelleobama@example.com",
+    "contact": "+1-555-3456"
   },
   {
     "bookId": "5",
@@ -77,7 +86,9 @@
       "Classic"
     ],
     "publisher": "George Allen & Unwin",
-    "yearOfPublishing": 1937
+    "yearOfPublishing": 1937,
+    "email": "jrrtolkien@example.com",
+    "contact": "+44-20-1234-5678"
   },
   {
     "bookId": "6",
@@ -93,6 +104,8 @@
       "Political"
     ],
     "publisher": "Secker & Warburg",
-    "yearOfPublishing": 1949
+    "yearOfPublishing": 1949,
+    "email": "georgeorwell@example.com",
+    "contact": "+44-20-8765-4321"
   }
 ]

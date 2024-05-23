@@ -6,34 +6,28 @@ const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', 'red', 'pink'];
 
 const data = [
     {
-        name: 'Page A',
-        uv: 4000,
+        name: 'The Silent Patient',
+        uv: 336,
         pv: 2400,
         amt: 2400,
     },
     {
-        name: 'Page B',
-        uv: 3000,
+        name: 'Sing',
+        uv: 384,
         pv: 1398,
         amt: 2210,
     },
     {
-        name: 'Page C',
-        uv: 2000,
+        name: 'Educated',
+        uv: 352,
         pv: 9800,
         amt: 2290,
     },
     {
-        name: 'Page D',
-        uv: 2780,
+        name: 'Becoming',
+        uv: 448,
         pv: 3908,
         amt: 2000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        amt: 2181,
     },
 
 
@@ -76,14 +70,18 @@ const PageToRead = () => {
 
     }, []);
 
+
+
     // const { image, tags, bookName, review, author, category, rating, totalPages, publisher, yearOfPublishing } = readbk;
 
-
-
-
-// console.log("For Chartsss",totalPages);
+    console.log("For Chartsss", readBook[0]);
     return (
         <div>
+            {
+                readBook.map(read => console.log("Book Name", read.bookName, read.totalPages))
+
+            }
+            
             <BarChart
                 width={500}
                 height={300}

@@ -7,6 +7,8 @@ import BookDetails from "../coponents/bookDetails/BookDetails";
 import Read from "../coponents/read/Read";
 import WishList from "../coponents/wishList/WishList";
 import ErrorPage from "../coponents/errorPage/ErrorPage";
+import AllAuthor from "../pages/AllAuthor";
+import AllBooks from "../pages/AllBooks";
 
 
 const router = createBrowserRouter([
@@ -49,7 +51,16 @@ const router = createBrowserRouter([
                 element: <PageToRead />,
                 loader: () => fetch(`../data.json`)
             },
-
+            {
+                path: '/allAuthor',
+                element: <AllAuthor/>,
+                loader: ()=> fetch('../data.json')
+            },
+            {
+                path: '/allBooks',
+                element: <AllBooks/>,
+                loader: ()=> fetch('../data.json')
+            }
         ]
     }
 ])

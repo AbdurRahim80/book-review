@@ -14,8 +14,8 @@ const Nav = () => {
                             <li><NavLink to='/'>Home</NavLink></li>
                             <li><NavLink to='/listed_books'>Listed Books</NavLink></li>
                             <li><NavLink to='/pages_to_read'>Pages to Read</NavLink></li>
-                            {/* <li><NavLink to = '/'>Home</NavLink></li>
-                            <li><NavLink to = '/'>Home</NavLink></li> */}
+                            <li><NavLink to = '/allAuthor'>All Author</NavLink></li>
+                            <li><NavLink to = '/allBooks'>All Books</NavLink></li>
                         </ul>
                     </div>
                     <Link className="btn btn-ghost text-2xl font-bold text-[#131313]">Book Vibe</Link>
@@ -34,6 +34,14 @@ const Nav = () => {
                         to='/pages_to_read'
                         className={({isActive})=> isActive? "border p-2 border-[#23BE0A] rounded-lg": "bold"}
                         >Pages to Read</NavLink></li>
+                        <li><NavLink 
+                        to='/allAuthor'
+                        className={({isActive})=> isActive? "border p-2 border-[#23BE0A] rounded-lg": "bold"}
+                        >All author</NavLink></li>
+                        <li><NavLink 
+                        to='/allBooks'
+                        className={({isActive})=> isActive? "border p-2 border-[#23BE0A] rounded-lg": "bold"}
+                        >All Books</NavLink></li>
                     </ul>
                 </div>
                 <div className="navbar-end gap-4">
