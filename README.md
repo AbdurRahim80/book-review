@@ -1,4 +1,4 @@
-<h1>hello</h1>
-<l>
-    <li>This is a book review website</li>
-</ul>
+# The website name is "Book review"
+# The website URL: 
+# Features and characteristics of this website.
+- Home: 
