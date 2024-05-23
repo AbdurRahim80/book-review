@@ -1,7 +1,7 @@
 
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 import { setBook } from '../../utilies/utility';
-import { setWishBook } from '../../utilies/utility1';
+// import { setWishBook } from '../../utilies/utility1';
 
 const BookDetails = () => {
     const bookDetails = useLoaderData();
@@ -12,9 +12,9 @@ const BookDetails = () => {
     const handleReadBook = bookId=>{
         setBook(bookId)
     }
-    const handleWishBook = bookId=>{
-        setWishBook(bookId)
-    }
+    // const handleWishBook = bookId=>{
+    //     setWishBook(bookId)
+    // }
 
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 mt-10'>
@@ -62,7 +62,7 @@ const BookDetails = () => {
                         <a className="py-[13px] px-4  rounded-xl border">Read</a>
                     </Link>
                     <Link 
-                    onClick={()=>handleWishBook(bookId)}
+                    // onClick={()=>handleWishBook(bookId)}
                     className="">
                         <a className="btn bg-[#50B1C9] text-[#FFF]">Wishlist</a>
                     </Link>

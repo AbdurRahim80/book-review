@@ -4,9 +4,10 @@ import { Link, useLoaderData } from 'react-router-dom';
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineUsergroupDelete } from "react-icons/ai";
 import { MdOutlineContactPage } from "react-icons/md";
+// import PageToRead from '../../pages/PageToRead/PageToRead';
 const Read = () => {
     const readLoader = useLoaderData()
-    const [readBook, setWishBook] = useState([]);
+    const [readBook, setReadBook] = useState([]);
     // const {bookId} = useParams()
     useEffect(() => {
         const storeRedadBook = getBook();
@@ -21,7 +22,7 @@ const Read = () => {
                 }
 
             }
-            setWishBook(bookRead)
+            setReadBook(bookRead)
             // console.log(readLoader,bookRead,storeRedadBook )
         }
 
@@ -80,6 +81,9 @@ const Read = () => {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div>
+                            {/* <PageToRead name ={readbk.bookName} totalPages ={readbk.totalPages}/> */}
                         </div>
                     </div>)
                 }

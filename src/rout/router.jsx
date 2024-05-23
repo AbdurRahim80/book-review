@@ -6,12 +6,14 @@ import PageToRead from "../pages/PageToRead/PageToRead";
 import BookDetails from "../coponents/bookDetails/BookDetails";
 import Read from "../coponents/read/Read";
 import WishList from "../coponents/wishList/WishList";
+import ErrorPage from "../coponents/errorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLay />,
+        errorElement:<ErrorPage/>,
         children: [
             {
                 index: true,
@@ -23,24 +25,12 @@ const router = createBrowserRouter([
                 path: '/book/:bookId',
                 element: <BookDetails />,
                 loader: () => fetch(`../data.json`),
-                // children: [
-                //     {
-                //         index: true,
-                //         element: <Read/>,
-                //         loader:()=> fetch(`../data.json`)
-                //     },
-                //     {
-                //         path: 'wishlist',
-                //         element: <WishList/>,
-                //         loader:()=> fetch(`../data.json`)
-                //     }
-                // ]
             }
             ,
             {
                 path: '/listed_books',
                 element: <BookListed />,
-                loader:() => fetch(`../data.json`),
+                loader: () => fetch(`../data.json`),
                 children: [
                     {
                         index: true,
@@ -54,18 +44,11 @@ const router = createBrowserRouter([
                     }
                 ]
             },
-            // {
-            //     index: true,
-            //     element: <Read />,
-            // },
             {
                 path: '/pages_to_read',
-                element: <PageToRead />
+                element: <PageToRead />,
+                loader: () => fetch(`../data.json`)
             },
-            // {
-            //     index: '../read',
-            //     element: <Read/>
-            // }
 
         ]
     }
